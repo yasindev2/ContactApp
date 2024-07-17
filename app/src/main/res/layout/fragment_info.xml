@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.fragments.info.InfoFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/main_color">
+
+
+        <ImageView
+            android:id="@+id/delete_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="16dp"
+            android:padding="10dp"
+            android:src="@drawable/delete" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/edit_btn"
+            android:layout_width="40dp"
+            android:src="@drawable/edit"
+            android:padding="10dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="66dp"
+            android:layout_height="40dp"/>
+
+
+    </FrameLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_image_info"
+        android:layout_width="200dp"
+        android:scaleType="centerCrop"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_launcher_background"
+        app:shapeAppearanceOverlay="@style/imageShapeRound" />
+
+
+    <TextView
+        android:id="@+id/name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/number_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_name"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/call_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="50dp"
+            android:src="@drawable/call"
+            app:shapeAppearanceOverlay="@style/imageShape" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/message_btn"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:padding="2dp"
+            android:src="@drawable/message"
+            app:shapeAppearanceOverlay="@style/imageShape" />
+
+    </LinearLayout>
+
+</LinearLayout>

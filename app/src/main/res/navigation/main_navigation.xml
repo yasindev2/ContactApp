@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="uz.yasindev.contactapp.ui.fragments.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.yasindev.contactapp.ui.fragments.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addFragment2"
+            app:destination="@id/addFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="uz.yasindev.contactapp.ui.fragments.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <argument
+            android:name="model"
+            app:argType="uz.yasindev.contactapp.core.models.RvContactModel" />
+        <action
+            android:id="@+id/action_infoFragment_to_profileImagesFragment"
+            app:destination="@id/profileImagesFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment2"
+        android:name="uz.yasindev.contactapp.ui.fragments.add.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment2_to_profileImagesFragment"
+            app:destination="@id/profileImagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="uz.yasindev.contactapp.ui.fragments.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileImagesFragment"
+        android:name="uz.yasindev.contactapp.ui.fragments.profileImages.ProfileImagesFragment"
+        android:label="fragment_profile_images"
+        tools:layout="@layout/fragment_profile_images" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="uz.yasindev.contactapp.ui.fragments.edit.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="model"
+            app:argType="uz.yasindev.contactapp.core.models.RvContactModel" />
+    </fragment>
+</navigation>
